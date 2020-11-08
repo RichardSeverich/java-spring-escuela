@@ -1,8 +1,8 @@
 -- CREATE DATA BASES
-CREATE DATABASE dbcondores;
+CREATE DATABASE dbescuela;
 
 -- DELETE DATA BASES
-DROP DATABASE dbcondores;
+DROP DATABASE dbescuela;
 
 -- SELECT ALL DATA: show all rows.
 SELECT * FROM users;
