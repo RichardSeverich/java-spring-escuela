@@ -1,6 +1,6 @@
 # java-spring-lawyer
 
-This project is a lawyer process management system, it has Swagger in order to see all the endpoints and models.
+This project is a school management system, it has Swagger in order to see all the endpoints and models.
 also it is using token authentication or authorization.
 
 ## Prerequisites 🔨
@@ -49,7 +49,7 @@ root, secret123
 0. execute all queries from sql folder
 1. gradlew build
 2. configure build/resources/main/application.properties
-3. java -jar build/libs/java-spring-lawyer.jar
+3. java -jar build/libs/java-spring-escuela.jar
 
 ### Deploy Docker
 0. execute all queries from sql folder
@@ -65,35 +65,38 @@ root, secret123
 3. create docker image
 
 ```
-docker build -t java-spring-lawyer:1.0 .
+docker build -t java-spring-escuela:1.0 .
 ```
 
 4. run container:
 
 ```
 first time: docker run -d --name java-spring-lawyer -p 8080:8080 java-spring-lawyer:1.0
-then: docker start java-spring-lawyer
+then: docker start java-spring-escuela
 ```
 
 ## Diagrams
 
+### Entity relation data base
+
+<p align="center">
+  <img src="documents/entity-relationship-model.jpg">
+</p>
+
 ### Entity relation - notation chen 
 
 <p align="center">
-  <img src="documents/db-notacion-chen.jpg">
+  <img src="documents/entity-relationship-chen-model.jpg">
 </p>
 
-### Entity relation - notation pata de gallo 
+### Entity relation - notation crows foot
 
 <p align="center">
-  <img src="documents/db-notacion-pata-de-gallo.jpg">
+  <img src="documents/entity-relationship-crows-foot-model.jpg">
 </p>
 
 ### Clases
 
-<p align="center">
-  <img src="documents/diagrama-clases.jpg">
-</p>
 
 ## Usage
 
@@ -110,9 +113,6 @@ SIl0sImlhdCI6MTYwMjEyMTQzMX0.Ee_NdiR3q2HY3nrjP4YY5B5sRs8udEjsZjTDqfT9MUAp8yxWTJ1
 http://localhost:8080/swagger-ui.html
 ```
 
-<p align="center">
-  <img src="documents/swagger.jpg">
-</p>
 
 ### API:
 
@@ -128,9 +128,7 @@ POST localhost:8080/api/v1/login
 }
 ```
 
-<p align="center">
-  <img src="documents/login.jpg">
-</p>
+
 
 #### Users:
 
