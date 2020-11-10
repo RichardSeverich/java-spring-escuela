@@ -79,6 +79,7 @@ CREATE TABLE courses_students(
    FOREIGN KEY (updated_by) REFERENCES users(username),
    FOREIGN KEY (id_course) REFERENCES courses(id),
    FOREIGN KEY (id_student) REFERENCES students(id),
+   UNIQUE (id_course, id_student),
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;
 
@@ -94,6 +95,7 @@ CREATE TABLE courses_subjets(
    FOREIGN KEY (updated_by) REFERENCES users(username),
    FOREIGN KEY (id_course) REFERENCES courses(id),
    FOREIGN KEY (id_subjet) REFERENCES subjets(id),
+   UNIQUE (id_subjet, id_course),
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;
 
@@ -110,5 +112,6 @@ CREATE TABLE subjets_students(
    FOREIGN KEY (updated_by) REFERENCES users(username),
    FOREIGN KEY (id_subjet) REFERENCES subjets(id),
    FOREIGN KEY (id_student) REFERENCES students(id),
+   UNIQUE (id_subjet, id_student),
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;

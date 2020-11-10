@@ -217,15 +217,15 @@ INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 102
 INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1022, "micky");
 INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1023, "micky");
 -- Course(1009)
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1000, "micky");
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1001, "micky");
 INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1002, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1002, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1002, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1002, "micky");
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1003, "micky");
 -- Course(1010)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1003, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1003, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1003, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1003, "micky");
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1004, "micky");
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1007, "micky");
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1008, "micky");
+INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1010, "micky");
 -- Course(1011)
 INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1011, 1001, "micky");
 INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1011, 1012, "micky");
