@@ -71,7 +71,7 @@ docker build -t java-spring-escuela:1.0 .
 4. run container:
 
 ```
-first time: docker run -d --name java-spring-lawyer -p 8080:8080 java-spring-lawyer:1.0
+first time: docker run -d --name java-spring-escuela -p 8080:8080 java-spring-escuela:1.0
 then: docker start java-spring-escuela
 ```
 
@@ -95,9 +95,6 @@ then: docker start java-spring-escuela
   <img src="documents/entity-relationship-crows-foot-model.jpg">
 </p>
 
-### Clases
-
-
 ## Usage
 
 ### Default Token: 
@@ -107,12 +104,64 @@ Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiZHZlcmExIiwiYXV0
 SIl0sImlhdCI6MTYwMjEyMTQzMX0.Ee_NdiR3q2HY3nrjP4YY5B5sRs8udEjsZjTDqfT9MUAp8yxWTJ1FYmZZb-F50jeIyEqmQwSXlxejuadeFlI25Q
 ```
 
-### Swagger Example:
+### Swagger Example :
 
 ```
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/swagger-escuela.html
 ```
+#### Swagger:
 
+<p align="center">
+  <img src="documents/swagger-escuela.jpg">
+</p>
+
+#### Controller Course :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-course.jpg">
+</p>
+
+#### Controller Course Student :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-course-student.jpg">
+</p>
+
+#### Controller Course Subjet :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-course-subjet.jpg">
+</p>
+
+#### Controller Login :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-login.jpg">
+</p>
+
+#### Controller Student :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-student.jpg">
+</p>
+
+#### Controller Subjet :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-subjet.jpg">
+</p>
+
+#### Controller Subjet Student :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-subjet-student.jpg">
+</p>
+
+#### Controller User :
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-user.jpg">
+</p>
 
 ### API:
 
@@ -127,9 +176,6 @@ POST localhost:8080/api/v1/login
   "token": "Bearer ..."
 }
 ```
-
-
-
 #### Users:
 
 ```
@@ -159,97 +205,96 @@ DELETE localhost:8080/api/v1/users/{id}
 }
 ```
 
-#### Persons:
+#### Students:
 
 ```
-GET localhost:8080/api/v1/persons
-POST localhost:8080/api/v1/persons
-GET localhost:8080/api/v1/persons/{id}
-PUT localhost:8080/api/v1/persons/{id}
-DELETE localhost:8080/api/v1/persons/{id}
+GET localhost:8080/api/v1/students
+POST localhost:8080/api/v1/students
+GET localhost:8080/api/v1/students/{id}
+PUT localhost:8080/api/v1/students/{id}
+DELETE localhost:8080/api/v1/students/{id}
 
 {
   "id": 1000,
-  "dni": "0000000",
-  "name": "Karen",
-  "fatherLastName": "Mendez",
-  "motherLastName": "Rodriguez",
-  "birthDate": "1990-01-01",
-  "telephone": "76479009",
-  "address": "Av. Villazon km-5",
-  "email": "Admin@gmail.com",
-  "creationDate": "2020-10-16 22:46:43",
+  "dni": "12356",
+  "name": "Bart",
+  "fatherLastName": "Simpson",
+  "motherLastName": "Simpson",
+  "birthDate": "1994-10-01",
+  "telephone": "77845632",
+  "address": "Av. Siempre viva",
+  "email": "bart10@gmail.com",
+  "yunta": "95-A",
+  "grade": "SBTTE",
+  "weapon": "CAB",
+  "promo": "2019",
+  "creationDate": "2020-11-10 21:59:49",
   "updateDate": null,
-  "createdBy": "admin",
+  "createdBy": "micky",
   "updatedBy": null
 }
 ```
 
-#### Process:
+#### Courses:
 
 ```
-GET localhost:8080/api/v1/process
-POST localhost:8080/api/v1/process
-GET localhost:8080/api/v1/process/{id}
-PUT localhost:8080/api/v1/process/{id}
-DELETE localhost:8080/api/v1/process/{id}
+GET localhost:8080/api/v1/courses
+POST localhost:8080/api/v1/courses
+GET localhost:8080/api/v1/courses/{id}
+PUT localhost:8080/api/v1/courses/{id}
+DELETE localhost:8080/api/v1/courses/{id}
 
 {
-  "id": 1000,
-  "description": "Robo",
-  "numberProcess": "1",
-  "courtNumber": "1",
-  "matter": "Civil",
-  "processType": "Preliminar",
-  "processTypeSub": "Conciliacion previa",
-  "admissionDate": "1990-01-01",
-  "preliminaryAudienceDate": "1990-01-01",
-  "supplementaryAudienceDate": "1990-01-01",
-  "appealDate": "1990-01-01",
-  "casacionDate": "1990-01-01",
-  "executionSentenceDate": "1990-01-01",
-  "state": "inProgress",
-  "creationDate": "2020-10-16 22:46:44",
+  "id": 1001,
+  "name": "Satinador 2016",
+  "creationDate": "2020-11-10 21:59:52",
   "updateDate": null,
-  "createdBy": "admin",
+  "createdBy": "micky",
   "updatedBy": null
 }
 ```
 
-#### Person Demandant:
+#### Subjets:
 
 ```
-GET localhost:8080/api/v1/person-demandant
-POST localhost:8080/api/v1/person-demandant
-GET localhost:8080/api/v1/person-demandant/{id}
-PUT localhost:8080/api/v1/person-demandant/{id}
-DELETE localhost:8080/api/v1/person-demandant/{id}
-GET localhost:8080/api/v1/process/{id}/person-demandant
+GET localhost:8080/api/v1/subjets
+POST localhost:8080/api/v1/subjets
+GET localhost:8080/api/v1/subjets/{id}
+PUT localhost:8080/api/v1/subjets/{id}
+DELETE localhost:8080/api/v1/subjets/{id}
+
 
 {
-  "id": 1000,
-  "idProcess": 1000,
-  "idPerson": 1000
+  "id": 1001,
+  "name": "DEFENSA PERSONAL",
+  "creationDate": "2020-11-10 21:59:52",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
 }
 ```
 
-#### Person Defendant:
+#### Courses Students:
+
 ```
-GET localhost:8080/api/v1/person-defendant
-POST localhost:8080/api/v1/person-defendant
-GET localhost:8080/api/v1/person-defendant/{id}
-PUT localhost:8080/api/v1/person-defendant/{id}
-DELETE localhost:8080/api/v1/person-defendant/{id}
-GET localhost:8080/api/v1/process/{id}/person-defendant
+GET localhost:8080/api/v1/courses-students
+POST localhost:8080/api/v1/courses-students
+GET localhost:8080/api/v1/courses-students/{id}
+PUT localhost:8080/api/v1/courses-students/{id}
+DELETE localhost:8080/api/v1/courses-students/{id}
 
 {
   "id": 1000,
-  "idProcess": 1000,
-  "idPerson": 1002
+  "courseId": 1003,
+  "studentId": 1000,
+  "creationDate": "2020-11-10 21:59:54",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
 }
 ```
 
-#### Previous Character:
+#### Courses Subjets:
 
 ```
 GET localhost:8080/api/v1/previous-character
@@ -257,22 +302,19 @@ POST localhost:8080/api/v1/previous-character
 GET localhost:8080/api/v1/previous-character/{id}
 PUT localhost:8080/api/v1/previous-character/{id}
 DELETE localhost:8080/api/v1/previous-character/{id}
-GET localhost:8080/api/v1/process/{id}/previous-character
 
 {
   "id": 1000,
-  "idProcess": 1000,
-  "notificationDate": "1990-01-01",
-  "description": "ausencia",
-  "state": "undefined",
-  "creationDate": "2020-10-16 22:46:45",
+  "courseId": 1003,
+  "studentId": 1000,
+  "creationDate": "2020-11-10 21:59:54",
   "updateDate": null,
-  "createdBy": "admin",
+  "createdBy": "micky",
   "updatedBy": null
 }
 ```
 
-#### Matter:
+#### Subjets Students:
 
 ```
 GET localhost:8080/api/v1/matter
@@ -283,41 +325,12 @@ DELETE localhost:8080/api/v1/matter/{id}
 
 {
   "id": 1000,
-  "name": "Penal
-}
-```
-
-#### Process Type:
-
-```
-GET localhost:8080/api/v1/process-type
-POST localhost:8080/api/v1/process-type
-GET localhost:8080/api/v1/process-type/{id}
-PUT localhost:8080/api/v1/process-type/{id}
-DELETE localhost:8080/api/v1/process-type/{id}
-GET localhost:8080/api/v1/matter/{id}/process-type
-
-{
-  "id": 1000,
-  "idMatter": 1002,
-  "name": "Preliminares"
-}
-```
-
-#### Sub Process Type:
-
-```
-GET localhost:8080/api/v1/sub-process-type
-POST localhost:8080/api/v1/sub-process-type
-GET localhost:8080/api/v1/sub-process-type/{id}
-PUT localhost:8080/api/v1/sub-process-type/{id}
-DELETE localhost:8080/api/v1/sub-process-type/{id}
-GET localhost:8080/api/v1/process-type/{id}/sub-process-type
-
-{
-  "id": 1000,
-  "idProcessType": 1000,
-  "name": "Conciliacion previa"
+  "courseId": 1003,
+  "studentId": 1000,
+  "creationDate": "2020-11-10 21:59:54",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
 }
 ```
 
