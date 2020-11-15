@@ -1,7 +1,7 @@
 package com.escuela.controllers;
 
 import com.escuela.helpers.Helper;
-import com.escuela.models.SubjetStudent;
+import com.escuela.models.CourseSubject;
 import com.escuela.responses.Response;
 import com.escuela.responses.ResponseBody;
 import com.escuela.services.ServiceDelete;
@@ -25,32 +25,32 @@ import org.springframework.web.bind.annotation.RestController;
  * RestController.
  */
 @RestController
-public class ControllerSubjetStudent {
+public class ControllerCourseSubject {
 
-  private static final String ENTITY_NAME = "subjet_student";
-
-  @Autowired
-  private ServiceGet<SubjetStudent> serviceGet;
+  private static final String ENTITY_NAME = "course_subject";
 
   @Autowired
-  private ServiceGetById<SubjetStudent> serviceGetById;
+  private ServiceGet<CourseSubject> serviceGet;
 
   @Autowired
-  private ServicePost<SubjetStudent> servicePost;
+  private ServiceGetById<CourseSubject> serviceGetById;
 
   @Autowired
-  private ServicePut<SubjetStudent> servicePut;
+  private ServicePost<CourseSubject> servicePost;
 
   @Autowired
-  private ServiceDelete<SubjetStudent> serviceDelete;
+  private ServicePut<CourseSubject> servicePut;
 
   @Autowired
-  private Helper<SubjetStudent> helper;
+  private ServiceDelete<CourseSubject> serviceDelete;
+
+  @Autowired
+  private Helper<CourseSubject> helper;
 
   /**
   * @return Response entity.
   */
-  @RequestMapping(method = RequestMethod.GET, value = Paths.PATH_SUBJETS_STUDENTS)
+  @RequestMapping(method = RequestMethod.GET, value = Paths.PATH_COURSES_SUBJECTS)
   public ResponseEntity<ResponseBody> getAll() {
     helper.setEntityName(ENTITY_NAME);
     Response response = serviceGet.getResponse();
@@ -61,7 +61,7 @@ public class ControllerSubjetStudent {
   * @param id id.
   * @return Response entity..
   */
-  @RequestMapping(method = RequestMethod.GET, value = Paths.PATH_SUBJETS_STUDENTS_WITH_ID)
+  @RequestMapping(method = RequestMethod.GET, value = Paths.PATH_COURSES_SUBJECTS_WITH_ID)
   public ResponseEntity<ResponseBody> getById(final @PathVariable Integer id) {
     helper.setEntityName(ENTITY_NAME);
     helper.setId(id);
@@ -70,29 +70,29 @@ public class ControllerSubjetStudent {
   }
 
   /**
-  * @param course course.
+  * @param CourseSubject courseSubject.
   * @return Response entity.
   */
-  @RequestMapping(method = RequestMethod.POST, value = Paths.PATH_SUBJETS_STUDENTS)
-  public ResponseEntity<ResponseBody> add(final @RequestBody @Valid SubjetStudent subjetStudent) {
+  @RequestMapping(method = RequestMethod.POST, value = Paths.PATH_COURSES_SUBJECTS)
+  public ResponseEntity<ResponseBody> add(final @RequestBody @Valid CourseSubject courseSubject) {
     helper.setEntityName(ENTITY_NAME);
-    helper.setEntity(subjetStudent);
+    helper.setEntity(courseSubject);
     Response response = servicePost.getResponse();
     return ResponseEntity.status(response.getHttpStatus()).body(response.getBody());
   }
 
   /**
-  * @param course course.
+  * @param CourseSubject courseSubject.
   * @param id   id.
   * @return Response entity.
   */
-  @RequestMapping(method = RequestMethod.PUT, value = Paths.PATH_SUBJETS_STUDENTS_WITH_ID)
+  @RequestMapping(method = RequestMethod.PUT, value = Paths.PATH_COURSES_SUBJECTS_WITH_ID)
   public ResponseEntity<ResponseBody> update(
-      final @RequestBody @Valid SubjetStudent subjetStudent, final @PathVariable Integer id) {
+      final @RequestBody @Valid CourseSubject courseSubject, final @PathVariable Integer id) {
     helper.setEntityName(ENTITY_NAME);
     helper.setId(id);
-    helper.setEntity(subjetStudent);
-    subjetStudent.setId(id);
+    helper.setEntity(courseSubject);
+    courseSubject.setId(id);
     Response response = servicePut.getResponse();
     return ResponseEntity.status(response.getHttpStatus()).body(response.getBody());
   }
@@ -101,7 +101,7 @@ public class ControllerSubjetStudent {
   * @param id id.
   * @return Response entity.
   */
-  @RequestMapping(method = RequestMethod.DELETE, value = Paths.PATH_SUBJETS_STUDENTS_WITH_ID)
+  @RequestMapping(method = RequestMethod.DELETE, value = Paths.PATH_COURSES_SUBJECTS_WITH_ID)
   public ResponseEntity<ResponseBody> delete(final @PathVariable Integer id) {
     helper.setEntityName(ENTITY_NAME);
     helper.setId(id);

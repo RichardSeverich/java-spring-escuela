@@ -17,16 +17,16 @@ public class RepositoryFactory {
   private RepositoryCourses repositoryCourses;
 
   @Autowired
-  private RepositorySubjets repositorySubjets;
+  private RepositorySubjects repositorySubjects;
 
   @Autowired
   private RepositoryCoursesStudents repositoryCoursesStudents;
 
   @Autowired
-  private RepositoryCoursesStudents repositoryCoursesSubjets;
+  private RepositoryCoursesSubjects repositoryCoursesSubjects;
 
   @Autowired
-  private RepositoryCoursesStudents repositorySubjetsStudents;
+  private RepositorySubjectsStudents repositorySubjectsStudents;
 
   /**
    *.
@@ -41,14 +41,14 @@ public class RepositoryFactory {
         return repositoryStudents;
       case "course":
         return repositoryCourses;
-      case "subjet":
-        return repositorySubjets;
+      case "subject":
+        return repositorySubjects;
       case "course_student":
         return repositoryCoursesStudents;
-      case "course_subjet":
-        return repositoryCoursesSubjets;
-      case "subjet_student":
-        return repositorySubjetsStudents;
+      case "course_subject":
+        return repositoryCoursesSubjects;
+      case "subject_student":
+        return repositorySubjectsStudents;
       default:
         return repositoryUsers;
     }

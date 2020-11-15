@@ -55,7 +55,7 @@ CREATE TABLE courses(
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;
 
-CREATE TABLE subjets(
+CREATE TABLE subjects(
    id INT AUTO_INCREMENT,
    name TEXT NOT NULL,
    creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -83,10 +83,10 @@ CREATE TABLE courses_students(
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;
 
-CREATE TABLE courses_subjets(
+CREATE TABLE courses_subjects(
    id INT AUTO_INCREMENT,
    id_course INT NOT NULL,
-   id_subjet INT NOT NULL,
+   id_subject INT NOT NULL,
    creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
    update_date DATETIME ON UPDATE CURRENT_TIMESTAMP,
    created_by VARCHAR(10),
@@ -94,14 +94,14 @@ CREATE TABLE courses_subjets(
    FOREIGN KEY (created_by) REFERENCES users(username),
    FOREIGN KEY (updated_by) REFERENCES users(username),
    FOREIGN KEY (id_course) REFERENCES courses(id),
-   FOREIGN KEY (id_subjet) REFERENCES subjets(id),
-   UNIQUE (id_subjet, id_course),
+   FOREIGN KEY (id_subject) REFERENCES subjects(id),
+   UNIQUE (id_subject, id_course),
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;
 
-CREATE TABLE subjets_students(
+CREATE TABLE subjects_students(
    id INT AUTO_INCREMENT,
-   id_subjet INT NOT NULL,
+   id_subject INT NOT NULL,
    id_student INT NOT NULL,
    score TEXT NOT NULL,
    creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -110,8 +110,8 @@ CREATE TABLE subjets_students(
    updated_by VARCHAR(10),
    FOREIGN KEY (created_by) REFERENCES users(username),
    FOREIGN KEY (updated_by) REFERENCES users(username),
-   FOREIGN KEY (id_subjet) REFERENCES subjets(id),
+   FOREIGN KEY (id_subject) REFERENCES subjects(id),
    FOREIGN KEY (id_student) REFERENCES students(id),
-   UNIQUE (id_subjet, id_student),
+   UNIQUE (id_subject, id_student),
    PRIMARY KEY (id)
 )AUTO_INCREMENT=1000;
