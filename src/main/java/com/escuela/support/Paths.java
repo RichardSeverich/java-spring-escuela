@@ -9,10 +9,10 @@ public final class Paths {
   private static final String USER = "/users";
   private static final String STUDENT = "/students";
   private static final String COURSE = "/courses";
-  private static final String SUBJET = "/subjets";
-  private static final String COURSES_STUDENTS = "/courses_students";
-  private static final String COURSES_SUBJETS = "/courses_subjets";
-  private static final String SUBJETS_STUDENTS = "/subjets_students";
+  private static final String SUBJECT = "/subjects";
+  private static final String COURSES_STUDENTS = "/courses-students";
+  private static final String COURSES_SUBJECTS = "/courses-subjects";
+  private static final String SUBJECTS_STUDENTS = "/subjects-students";
   private static final String LOGIN = "/login";
   private static final String ID = "/{id}";
   // Login
@@ -27,17 +27,20 @@ public final class Paths {
   public static final String PATH_COURSES = VERSION + COURSE;
   public static final String PATH_COURSES_WITH_ID = PATH_COURSES + ID;
   // Courses
-  public static final String PATH_SUBJETS = VERSION + SUBJET;
-  public static final String PATH_SUBJETS_WITH_ID = PATH_SUBJETS + ID;
+  public static final String PATH_SUBJECTS = VERSION + SUBJECT;
+  public static final String PATH_SUBJECTS_WITH_ID = PATH_SUBJECTS + ID;
   //Courses Students
   public static final String PATH_COURSES_STUDENTS = VERSION + COURSES_STUDENTS;
   public static final String PATH_COURSES_STUDENTS_WITH_ID = PATH_COURSES_STUDENTS + ID;
-  //Courses Subjets
-  public static final String PATH_COURSES_SUBJETS = VERSION + COURSES_SUBJETS;
-  public static final String PATH_COURSES_SUBJETS_WITH_ID = PATH_COURSES_SUBJETS + ID;
-  //Subjets Students
-  public static final String PATH_SUBJETS_STUDENTS = VERSION + SUBJETS_STUDENTS;
-  public static final String PATH_SUBJETS_STUDENTS_WITH_ID = PATH_SUBJETS_STUDENTS + ID;
+  //Courses Subjects
+  public static final String PATH_COURSES_SUBJECTS = VERSION + COURSES_SUBJECTS;
+  public static final String PATH_COURSES_SUBJECTS_WITH_ID = PATH_COURSES_SUBJECTS + ID;
+  //Subjects Students
+  public static final String PATH_SUBJECTS_STUDENTS = VERSION + SUBJECTS_STUDENTS;
+  public static final String PATH_SUBJECTS_STUDENTS_WITH_ID = PATH_SUBJECTS_STUDENTS + ID;
+  //Subjects Students
+  public static final String PATH_COURSES_STUDENTS_JOIN = PATH_COURSES_WITH_ID + STUDENT;
+
   /**
   * Private constructor for utility class.
   */

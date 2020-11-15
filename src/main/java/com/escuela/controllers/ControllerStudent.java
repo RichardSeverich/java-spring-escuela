@@ -70,7 +70,7 @@ public class ControllerStudent {
   }
 
   /**
-  * @param user user.
+  * @param Student student.
   * @return Response entity.
   */
   @RequestMapping(method = RequestMethod.POST, value = Paths.PATH_STUDENTS)
@@ -82,7 +82,7 @@ public class ControllerStudent {
   }
 
   /**
-  * @param student student.
+  * @param Student student.
   * @param id   id.
   * @return Response entity.
   */

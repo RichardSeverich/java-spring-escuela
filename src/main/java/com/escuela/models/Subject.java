@@ -19,8 +19,8 @@ import lombok.Setter;
 * Class.
 */
 @Entity
-@Table(name = "courses_subjets")
-public class CourseSubjet {
+@Table(name = "subjects")
+public class Subject {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,14 +29,10 @@ public class CourseSubjet {
   private Integer id;
 
   @NotNull
-  @Column(name = "id_course")
+  @Size(min = Magic.TRHEE, max = Magic.ONE_HUNDRED_TWENTY)
+  @Column(name = "name")
   @Getter @Setter
-  private Integer courseId;
-
-  @NotNull
-  @Column(name = "id_subjet")
-  @Getter @Setter
-  private Integer studentId;
+  private String name;
   
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
@@ -57,6 +53,6 @@ public class CourseSubjet {
   /**
   * Constructor.
   */
-  public CourseSubjet() {
+  public Subject() {
   }
 }

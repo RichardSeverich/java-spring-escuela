@@ -97,33 +97,33 @@ INSERT INTO courses (name, created_by) VALUES ("Condor 2018", "micky");
 INSERT INTO courses (name, created_by) VALUES ("Condor 2019", "micky");
 INSERT INTO courses (name, created_by) VALUES ("Condor 2020", "micky");
 
--- Subjets Data
-INSERT INTO subjets (name, created_by) VALUES ("ENTRENAMIENTO FISICO", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("DEFENSA PERSONAL", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("MARCHAS", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("INSTRUCCION DE TIRO", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("NATACION", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("LECTURA DE CARTAS Y NAVEGACION", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("COMUNICACIONES Y CRIPTOGRAFIA", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TECNICA DE ARMAS", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("CRUCE DE OBSTACULOS", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("COMUNICACIONES Y CRIPTOGRAFIA", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("DOCTRINA DEL SATINADOR Y PLANEAMIENTO", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("INSTRUCCION DE BOTES", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("AUTOMOTORES-ACONDICIONAMIENTO DE EQUINOS Y CERRAJERIA (HDS)", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TRAMPAS (HDS)", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TÉCNICAS DE CARACTERIZACION Y SEGUIMIENTO (HDS)", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("ARMAS BLANCAS Y CONTUNDENTES", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TECNICAS DE DESCENSO Y ASCENSO DE HELICOPTEROS", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("JARDIN DE EFICIENCIA COMBATIVA", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("INFILTRACION Y EXFILTRACION", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("RECONOCIMIENTO ESPECIAL", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("LIDERAZGO DE COMBATE", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TECNICA DE ELIMINACION Y DESTRUCCION", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TECNICA DE SABOTAJE", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("TECNICA DE SECUESTRO O CAPTURA", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("OPERACIONES DE SATINAJE OBSERVADAS", "micky");
-INSERT INTO subjets (name, created_by) VALUES ("PREPARACION FISICA", "micky");
+-- subjects Data
+INSERT INTO subjects (name, created_by) VALUES ("ENTRENAMIENTO FISICO", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("DEFENSA PERSONAL", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("MARCHAS", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("INSTRUCCION DE TIRO", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("NATACION", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("LECTURA DE CARTAS Y NAVEGACION", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("COMUNICACIONES Y CRIPTOGRAFIA", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TECNICA DE ARMAS", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("CRUCE DE OBSTACULOS", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("COMUNICACIONES Y CRIPTOGRAFIA", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("DOCTRINA DEL SATINADOR Y PLANEAMIENTO", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("INSTRUCCION DE BOTES", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("AUTOMOTORES-ACONDICIONAMIENTO DE EQUINOS Y CERRAJERIA (HDS)", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TRAMPAS (HDS)", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TÉCNICAS DE CARACTERIZACION Y SEGUIMIENTO (HDS)", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("ARMAS BLANCAS Y CONTUNDENTES", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TECNICAS DE DESCENSO Y ASCENSO DE HELICOPTEROS", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("JARDIN DE EFICIENCIA COMBATIVA", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("INFILTRACION Y EXFILTRACION", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("RECONOCIMIENTO ESPECIAL", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("LIDERAZGO DE COMBATE", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TECNICA DE ELIMINACION Y DESTRUCCION", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TECNICA DE SABOTAJE", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("TECNICA DE SECUESTRO O CAPTURA", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("OPERACIONES DE SATINAJE OBSERVADAS", "micky");
+INSERT INTO subjects (name, created_by) VALUES ("PREPARACION FISICA", "micky");
 
 -- Relation courses students
 -- Course 2018(1003)
@@ -185,95 +185,95 @@ INSERT INTO courses_students (id_course, id_student, created_by) VALUES (1011, 1
 INSERT INTO courses_students (id_course, id_student, created_by) VALUES (1011, 1049, "micky");
 INSERT INTO courses_students (id_course, id_student, created_by) VALUES (1011, 1050, "micky");
 
--- Relation Courses Subjets
+-- Relation Courses subjects
 -- Course(1003)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1000, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1001, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1002, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1003, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1000, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1001, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1002, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1003, "micky");
 -- Course(1003)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1004, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1005, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1006, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1003, 1007, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1004, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1005, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1006, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1003, 1007, "micky");
 -- Course(1004)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1008, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1009, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1010, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1011, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1008, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1009, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1010, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1011, "micky");
 -- Course(1004)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1012, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1013, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1014, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1004, 1015, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1012, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1013, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1014, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1004, 1015, "micky");
 -- Course(1005)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1016, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1017, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1018, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1019, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1016, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1017, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1018, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1019, "micky");
 -- Course(1005)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1020, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1021, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1022, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1005, 1023, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1020, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1021, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1022, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1005, 1023, "micky");
 -- Course(1009)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1000, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1001, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1002, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1009, 1003, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1009, 1000, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1009, 1001, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1009, 1002, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1009, 1003, "micky");
 -- Course(1010)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1004, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1007, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1008, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1010, 1010, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1010, 1004, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1010, 1007, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1010, 1008, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1010, 1010, "micky");
 -- Course(1011)
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1011, 1001, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1011, 1012, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1011, 1013, "micky");
-INSERT INTO courses_subjets (id_course, id_subjet, created_by) VALUES (1011, 1015, "micky");
--- Relation Subjets Student
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1011, 1001, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1011, 1012, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1011, 1013, "micky");
+INSERT INTO courses_subjects (id_course, id_subjet, created_by) VALUES (1011, 1015, "micky");
+-- Relation subjects Student
 -- Student(1000)
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1000, 1000, "60", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1001, 1000, "78", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1002, 1000, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1003, 1000, "79", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1004, 1000, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1005, 1000, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1006, 1000, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1007, 1000, "75", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1000, 1000, "60", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1001, 1000, "78", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1002, 1000, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1003, 1000, "79", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1004, 1000, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1005, 1000, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1006, 1000, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1007, 1000, "75", "micky");
 
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1008, 1000, "10", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1009, 1000, "10", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1010, 1000, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1011, 1000, "10", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1012, 1000, "10", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1013, 1000, "50", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1014, 1000, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1015, 1000, "75", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1008, 1000, "10", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1009, 1000, "10", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1010, 1000, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1011, 1000, "10", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1012, 1000, "10", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1013, 1000, "50", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1014, 1000, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1015, 1000, "75", "micky");
 
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1000, 1001, "60", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1001, 1001, "60", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1002, 1001, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1003, 1001, "78", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1004, 1001, "89", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1005, 1001, "86", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1006, 1001, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1007, 1001, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1000, 1001, "60", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1001, 1001, "60", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1002, 1001, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1003, 1001, "78", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1004, 1001, "89", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1005, 1001, "86", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1006, 1001, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1007, 1001, "90", "micky");
 
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1000, 1002, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1001, 1002, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1002, 1002, "100", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1003, 1002, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1004, 1002, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1005, 1002, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1006, 1002, "50", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1007, 1002, "59", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1000, 1002, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1001, 1002, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1002, 1002, "100", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1003, 1002, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1004, 1002, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1005, 1002, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1006, 1002, "50", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1007, 1002, "59", "micky");
 
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1000, 1003, "65", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1001, 1003, "79", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1002, 1003, "10", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1003, 1003, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1004, 1003, "90", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1005, 1003, "80", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1006, 1003, "10", "micky");
-INSERT INTO subjets_students (id_subjet, id_student, score, created_by) VALUES (1007, 1003, "79", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1000, 1003, "65", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1001, 1003, "79", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1002, 1003, "10", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1003, 1003, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1004, 1003, "90", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1005, 1003, "80", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1006, 1003, "10", "micky");
+INSERT INTO subjects_students (id_subjet, id_student, score, created_by) VALUES (1007, 1003, "79", "micky");

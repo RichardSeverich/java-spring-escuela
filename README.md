@@ -1,4 +1,4 @@
-# java-spring-lawyer
+# java-spring-escuela
 
 This project is a school management system, it has Swagger in order to see all the endpoints and models.
 also it is using token authentication or authorization.
@@ -127,7 +127,7 @@ http://localhost:8080/swagger-escuela.html
   <img src="documents/swagger-escuela-controller-course-student.jpg">
 </p>
 
-#### Controller Course Subjet :
+#### Controller Course Subject :
 
 <p align="center">
   <img src="documents/swagger-escuela-controller-course-subjet.jpg">
@@ -145,13 +145,13 @@ http://localhost:8080/swagger-escuela.html
   <img src="documents/swagger-escuela-controller-student.jpg">
 </p>
 
-#### Controller Subjet :
+#### Controller Subject :
 
 <p align="center">
   <img src="documents/swagger-escuela-controller-subjet.jpg">
 </p>
 
-#### Controller Subjet Student :
+#### Controller Subject Student :
 
 <p align="center">
   <img src="documents/swagger-escuela-controller-subjet-student.jpg">
@@ -254,14 +254,14 @@ DELETE localhost:8080/api/v1/courses/{id}
 }
 ```
 
-#### Subjets:
+#### Subjects:
 
 ```
-GET localhost:8080/api/v1/subjets
-POST localhost:8080/api/v1/subjets
-GET localhost:8080/api/v1/subjets/{id}
-PUT localhost:8080/api/v1/subjets/{id}
-DELETE localhost:8080/api/v1/subjets/{id}
+GET localhost:8080/api/v1/subjects
+POST localhost:8080/api/v1/subjects
+GET localhost:8080/api/v1/subjects/{id}
+PUT localhost:8080/api/v1/subjects/{id}
+DELETE localhost:8080/api/v1/subjects/{id}
 
 
 {
@@ -294,19 +294,19 @@ DELETE localhost:8080/api/v1/courses-students/{id}
 }
 ```
 
-#### Courses Subjets:
+#### Courses Subjects:
 
 ```
-GET localhost:8080/api/v1/previous-character
-POST localhost:8080/api/v1/previous-character
-GET localhost:8080/api/v1/previous-character/{id}
-PUT localhost:8080/api/v1/previous-character/{id}
-DELETE localhost:8080/api/v1/previous-character/{id}
+GET localhost:8080/api/v1/courses-subjects
+POST localhost:8080/api/v1/courses-subjects
+GET localhost:8080/api/v1/courses-subjects/{id}
+PUT localhost:8080/api/v1/courses-subjects/{id}
+DELETE localhost:8080/api/v1/courses-subjects/{id}
 
 {
   "id": 1000,
-  "courseId": 1003,
-  "studentId": 1000,
+  "idCourse": 1003,
+  "idSubject": 1000,
   "creationDate": "2020-11-10 21:59:54",
   "updateDate": null,
   "createdBy": "micky",
@@ -314,20 +314,50 @@ DELETE localhost:8080/api/v1/previous-character/{id}
 }
 ```
 
-#### Subjets Students:
+#### Subjects Students:
 
 ```
-GET localhost:8080/api/v1/matter
-POST localhost:8080/api/v1/matter
-GET localhost:8080/api/v1/matter/{id}
-PUT localhost:8080/api/v1/matter/{id}
-DELETE localhost:8080/api/v1/matter/{id}
+GET localhost:8080/api/v1/subjects-students
+POST localhost:8080/api/v1/subjects-students
+GET localhost:8080/api/v1/subjects-students/{id}
+PUT localhost:8080/api/v1/subjects-students/{id}
+DELETE localhost:8080/api/v1/subjects-students/{id}
 
 {
   "id": 1000,
-  "courseId": 1003,
-  "studentId": 1000,
-  "creationDate": "2020-11-10 21:59:54",
+  "idSubject": 1000,
+  "idStudent": 1000,
+  "score": "60",
+  "creationDate": "2020-11-10 22:59:54",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  All Students for 1 Id Course:
+
+```
+GET localhost:8080/api/v1/courses/{id}/students
+POST localhost:8080/api/v1/courses/{id}/students
+GET localhost:8080/api/v1/courses/{id}/students
+PUT localhost:8080/api/v1/courses/{id}/students
+DELETE localhost:8080/api/v1/courses/{id}/students
+
+{
+  "id": 1000,
+  "idCourse": 1003,
+  "idStudent": 1000,
+  "courseName": "Satinador 2018",
+  "studentDni": "12356",
+  "studentName": "Bart",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "95-A",
+  "studentGrade": "SBTTE",
+  "studentWeapon": "CAB",
+  "studentPromo": "2019",
+  "creationDate": "2020-11-15 22:59:00",
   "updateDate": null,
   "createdBy": "micky",
   "updatedBy": null
