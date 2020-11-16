@@ -127,10 +127,16 @@ http://localhost:8080/swagger-escuela.html
   <img src="documents/swagger-escuela-controller-course-student.jpg">
 </p>
 
+#### Controller Course Student Join:
+
+<p align="center">
+  <img src="documents/swagger-escuela-controller-course-student-join.jpg">
+</p>
+
 #### Controller Course Subject :
 
 <p align="center">
-  <img src="documents/swagger-escuela-controller-course-subjet.jpg">
+  <img src="documents/swagger-escuela-controller-course-subject.jpg">
 </p>
 
 #### Controller Login :
@@ -148,19 +154,25 @@ http://localhost:8080/swagger-escuela.html
 #### Controller Subject :
 
 <p align="center">
-  <img src="documents/swagger-escuela-controller-subjet.jpg">
+  <img src="documents/swagger-escuela-controller-subject.jpg">
 </p>
 
 #### Controller Subject Student :
 
 <p align="center">
-  <img src="documents/swagger-escuela-controller-subjet-student.jpg">
+  <img src="documents/swagger-escuela-controller-subject-student.jpg">
 </p>
 
 #### Controller User :
 
 <p align="center">
   <img src="documents/swagger-escuela-controller-user.jpg">
+</p>
+
+#### Swagger Models :
+
+<p align="center">
+  <img src="documents/swagger-escuela-model.jpg">
 </p>
 
 ### API:
@@ -335,7 +347,7 @@ DELETE localhost:8080/api/v1/subjects-students/{id}
 }
 ```
 
-####  All Students for 1 Id Course:
+####  Course Student Join:
 
 ```
 GET localhost:8080/api/v1/courses/{id}/students
