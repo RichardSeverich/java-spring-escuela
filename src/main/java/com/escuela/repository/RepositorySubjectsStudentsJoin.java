@@ -13,8 +13,8 @@ public interface RepositorySubjectsStudentsJoin extends RepositoryGeneric<Studen
 
   @Query(value = "SELECT "
   +"subjects_students.id,"
-  +"subjects.id AS `id_subject`,"
-  +"students.id AS `id_student`,"
+  +"subjects.id AS `id_subject`, "
+  +"students.id AS `id_student`, "
   +"students.dni AS `student_dni`,"
   +"students.name AS `student_name`,"
   +"students.father_last_name AS `student_father_last_name`,"

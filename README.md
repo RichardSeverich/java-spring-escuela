@@ -376,6 +376,199 @@ DELETE localhost:8080/api/v1/courses/{id}/students
 }
 ```
 
+####  Course Subject Join:
+
+```
+GET localhost:8080/api/v1/courses/{id}/subjects
+POST localhost:8080/api/v1/courses/{id}/subjects
+GET localhost:8080/api/v1/courses/{id}/subjects
+PUT localhost:8080/api/v1/courses/{id}/subjects
+DELETE localhost:8080/api/v1/courses/{id}/subjects
+
+{
+  "id": 1000,
+  "idCourse": 1003,
+  "idSubject": 1000,
+  "courseName": "Satinador 2018",
+  "subjectName": "ENTRENAMIENTO FISICO",
+  "creationDate": "2020-11-16 18:14:39",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1001,
+  "idCourse": 1003,
+  "idSubject": 1001,
+  "courseName": "Satinador 2018",
+  "subjectName": "DEFENSA PERSONAL",
+  "creationDate": "2020-11-16 18:14:39",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Student Course Join:
+
+```
+GET localhost:8080/api/v1/students/{id}/courses
+POST localhost:8080/api/v1/students/{id}/courses
+GET localhost:8080/api/v1/students/{id}/courses
+PUT localhost:8080/api/v1/students/{id}/courses
+DELETE localhost:8080/api/v1/students/{id}/courses
+
+{
+  "id": 1003,
+  "idCourse": 1003,
+  "idStudent": 1003,
+  "courseName": "Satinador 2018",
+  "studentDni": "123456",
+  "studentName": "Marge",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "48-A",
+  "studentGrade": "ALF",
+  "studentWeapon": "CGON",
+  "studentPromo": "2018",
+  "creationDate": "2020-11-16 18:14:36",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Student Subject Join:
+
+```
+GET localhost:8080/api/v1/students/{id}/subjects
+POST localhost:8080/api/v1/students/{id}/subjects
+GET localhost:8080/api/v1/students/{id}/subjects
+PUT localhost:8080/api/v1/students/{id}/subjects
+DELETE localhost:8080/api/v1/students/{id}/subjects
+
+{
+  "id": 1032,
+  "idSubject": 1000,
+  "idStudent": 1003,
+  "studentDni": "123456",
+  "studentName": "Marge",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "48-A",
+  "studentGrade": "ALF",
+  "studentWeapon": "CGON",
+  "studentPromo": "2018",
+  "subjectName": "ENTRENAMIENTO FISICO",
+  "subjectScore": "65",
+  "creationDate": "2020-11-16 18:14:42",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1033,
+  "idSubject": 1001,
+  "idStudent": 1003,
+  "studentDni": "123456",
+  "studentName": "Marge",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "48-A",
+  "studentGrade": "ALF",
+  "studentWeapon": "CGON",
+  "studentPromo": "2018",
+  "subjectName": "DEFENSA PERSONAL",
+  "subjectScore": "79",
+  "creationDate": "2020-11-16 18:14:43",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Subject Course Join:
+
+```
+GET localhost:8080/api/v1/subjects/{id}/courses
+POST localhost:8080/api/v1/subjects/{id}/courses
+GET localhost:8080/api/v1/subjects/{id}/courses
+PUT localhost:8080/api/v1/subjects/{id}/courses
+DELETE localhost:8080/api/v1/subjects/{id}/courses
+
+{
+  "id": 1003,
+  "idCourse": 1003,
+  "idSubject": 1003,
+  "courseName": "Satinador 2018",
+  "subjectName": "INSTRUCCION DE TIRO",
+  "creationDate": "2020-11-16 18:14:39",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1027,
+  "idCourse": 1009,
+  "idSubject": 1003,
+  "courseName": "Condor 2018",
+  "subjectName": "INSTRUCCION DE TIRO",
+  "creationDate": "2020-11-16 18:14:40",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Subject Student Join:
+
+```
+GET localhost:8080/api/v1/subjects/{id}/students
+POST localhost:8080/api/v1/subjects/{id}/students
+GET localhost:8080/api/v1/subjects/{id}/students
+PUT localhost:8080/api/v1/subjects/{id}/students
+DELETE localhost:8080/api/v1/subjects/{id}/students
+
+{
+  "id": 1003,
+  "idSubject": 1003,
+  "idStudent": 1000,
+  "studentDni": "12356",
+  "studentName": "Bart",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "95-A",
+  "studentGrade": "SBTTE",
+  "studentWeapon": "CAB",
+  "studentPromo": "2019",
+  "subjectName": "INSTRUCCION DE TIRO",
+  "subjectScore": "79",
+  "creationDate": "2020-11-16 18:14:41",
+"updateDate": null,
+    "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1019,
+  "idSubject": 1003,
+  "idStudent": 1001,
+  "studentDni": "123478",
+  "studentName": "Lisa",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "97-A",
+  "studentGrade": "SBTTE",
+  "studentWeapon": "CAB",
+  "studentPromo": "2020",
+  "subjectName": "INSTRUCCION DE TIRO",
+  "subjectScore": "78",
+  "creationDate": "2020-11-16 18:14:42",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
 ## Contributing
 
 1. Fork it!

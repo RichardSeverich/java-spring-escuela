@@ -2,7 +2,7 @@ package com.escuela.services;
 
 import com.escuela.helpers.Helper;
 import com.escuela.models.StudentSubjectJoin;
-import com.escuela.repository.RepositoryStudentsSubjectsJoin;
+import com.escuela.repository.RepositorySubjectsStudentsJoin;
 import com.escuela.responses.Response;
 import com.escuela.responses.ResponseBuilder;
 import com.escuela.services.IService;
@@ -22,14 +22,14 @@ public class ServiceJoinSubjectStudent implements IService {
   private ResponseBuilder<StudentSubjectJoin> responseBuilder;
 
   @Autowired
-  private RepositoryStudentsSubjectsJoin repository;
+  private RepositorySubjectsStudentsJoin repository;
 
   /**
   * {@inheritDoc}
   */
   @Override
   public Response getResponse() {
-    Iterable<StudentSubjectJoin> iterable = repository.findStudentSubjectJoin(helper.getId());
+    Iterable<StudentSubjectJoin> iterable = repository.findSubjectStudentJoin(helper.getId());
     iterable.forEach(helper.getList()::add);
     return responseBuilder.getResponseOkForGet();
   }
