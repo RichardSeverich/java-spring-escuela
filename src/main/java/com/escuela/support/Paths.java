@@ -38,8 +38,18 @@ public final class Paths {
   //Subjects Students
   public static final String PATH_SUBJECTS_STUDENTS = VERSION + SUBJECTS_STUDENTS;
   public static final String PATH_SUBJECTS_STUDENTS_WITH_ID = PATH_SUBJECTS_STUDENTS + ID;
-  //Subjects Students
+  //Courses Students Join
   public static final String PATH_COURSES_STUDENTS_JOIN = PATH_COURSES_WITH_ID + STUDENT;
+  //Courses Subjects Join
+  public static final String PATH_COURSES_SUBJECTS_JOIN = PATH_COURSES_WITH_ID + SUBJECT;
+  //Students Courses Join
+  public static final String PATH_STUDENTS_COURSES_JOIN = PATH_STUDENTS_WITH_ID + COURSE;
+  //Students Subjects Join
+  public static final String PATH_STUDENTS_SUBJECTS_JOIN = PATH_STUDENTS_WITH_ID + SUBJECT;
+  //Subjects Students Join
+  public static final String PATH_SUBJECTS_STUDENTS_JOIN = PATH_SUBJECTS_WITH_ID + STUDENT;
+  //Subjects Courses Join
+  public static final String PATH_SUBJECTS_COURSES_JOIN = PATH_SUBJECTS_WITH_ID + COURSE;
 
   /**
   * Private constructor for utility class.
