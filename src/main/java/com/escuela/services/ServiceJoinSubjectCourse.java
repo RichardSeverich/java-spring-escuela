@@ -2,7 +2,7 @@ package com.escuela.services;
 
 import com.escuela.helpers.Helper;
 import com.escuela.models.CourseSubjectJoin;
-import com.escuela.repository.RepositorySubjectsCoursesJoin;
+import com.escuela.repository.RepositoryCoursesSubjectsJoin;
 import com.escuela.responses.Response;
 import com.escuela.responses.ResponseBuilder;
 import com.escuela.services.IService;
@@ -22,7 +22,7 @@ public class ServiceJoinSubjectCourse implements IService {
   private ResponseBuilder<CourseSubjectJoin> responseBuilder;
 
   @Autowired
-  private RepositorySubjectsCoursesJoin repository;
+  private RepositoryCoursesSubjectsJoin repository;
 
   /**
   * {@inheritDoc}

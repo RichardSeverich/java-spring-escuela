@@ -22,6 +22,8 @@ public class Helper<T> {
   @Getter @Setter
   private Integer id;
   @Getter @Setter
+  private Integer idAux;
+  @Getter @Setter
   private T entity;
   @Getter @Setter
   private List<T> list;
@@ -33,6 +35,7 @@ public class Helper<T> {
   */
   public Helper() {
     this.id = 0;
+    this.idAux = 0;
     this.list = new ArrayList<>();
     this.entityName = "";
   }

@@ -351,10 +351,6 @@ DELETE localhost:8080/api/v1/subjects-students/{id}
 
 ```
 GET localhost:8080/api/v1/courses/{id}/students
-POST localhost:8080/api/v1/courses/{id}/students
-GET localhost:8080/api/v1/courses/{id}/students
-PUT localhost:8080/api/v1/courses/{id}/students
-DELETE localhost:8080/api/v1/courses/{id}/students
 
 {
   "id": 1000,
@@ -380,10 +376,6 @@ DELETE localhost:8080/api/v1/courses/{id}/students
 
 ```
 GET localhost:8080/api/v1/courses/{id}/subjects
-POST localhost:8080/api/v1/courses/{id}/subjects
-GET localhost:8080/api/v1/courses/{id}/subjects
-PUT localhost:8080/api/v1/courses/{id}/subjects
-DELETE localhost:8080/api/v1/courses/{id}/subjects
 
 {
   "id": 1000,
@@ -413,10 +405,6 @@ DELETE localhost:8080/api/v1/courses/{id}/subjects
 
 ```
 GET localhost:8080/api/v1/students/{id}/courses
-POST localhost:8080/api/v1/students/{id}/courses
-GET localhost:8080/api/v1/students/{id}/courses
-PUT localhost:8080/api/v1/students/{id}/courses
-DELETE localhost:8080/api/v1/students/{id}/courses
 
 {
   "id": 1003,
@@ -442,10 +430,6 @@ DELETE localhost:8080/api/v1/students/{id}/courses
 
 ```
 GET localhost:8080/api/v1/students/{id}/subjects
-POST localhost:8080/api/v1/students/{id}/subjects
-GET localhost:8080/api/v1/students/{id}/subjects
-PUT localhost:8080/api/v1/students/{id}/subjects
-DELETE localhost:8080/api/v1/students/{id}/subjects
 
 {
   "id": 1032,
@@ -491,10 +475,6 @@ DELETE localhost:8080/api/v1/students/{id}/subjects
 
 ```
 GET localhost:8080/api/v1/subjects/{id}/courses
-POST localhost:8080/api/v1/subjects/{id}/courses
-GET localhost:8080/api/v1/subjects/{id}/courses
-PUT localhost:8080/api/v1/subjects/{id}/courses
-DELETE localhost:8080/api/v1/subjects/{id}/courses
 
 {
   "id": 1003,
@@ -524,10 +504,6 @@ DELETE localhost:8080/api/v1/subjects/{id}/courses
 
 ```
 GET localhost:8080/api/v1/subjects/{id}/students
-POST localhost:8080/api/v1/subjects/{id}/students
-GET localhost:8080/api/v1/subjects/{id}/students
-PUT localhost:8080/api/v1/subjects/{id}/students
-DELETE localhost:8080/api/v1/subjects/{id}/students
 
 {
   "id": 1003,

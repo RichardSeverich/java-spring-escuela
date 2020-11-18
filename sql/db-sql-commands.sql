@@ -66,16 +66,6 @@ INNER JOIN courses
 ON courses.id=courses_students.id_course
 WHERE courses_students.id_student = 1001;
 
--- 1 STUDENT ALL COURSES NOT SUBSCRIBE
-SELECT courses.*
-  FROM courses
-  WHERE courses.id
-  NOT IN 
-  (SELECT 
-    courses_students.id_course 
-    FROM courses_students 
-    WHERE courses_students.id_student = '1000');
-
 -- INNER JOIN 1 COURSES ALL SUBJECTS
 SELECT
 courses_subjects.id,
@@ -169,16 +159,16 @@ SELECT
 subjects_students.id,
 subjects.id AS `id_subject`,
 students.id AS `id_student`,
-students.dni,
-students.name,
-students.father_last_name,
-students.mother_last_name,  
-students.yunta, 
-students.grade, 
-students.weapon, 
-students.promo, 
+students.dni AS `student_dni`,
+students.name AS `student_name` ,
+students.father_last_name AS `student_father_last_name`,
+students.mother_last_name AS `student_mother_last_name`,  
+students.yunta AS `student_yunta`, 
+students.grade AS `student_grade`, 
+students.weapon AS `student_weapon`, 
+students.promo AS `student_promo`, 
 subjects.name AS `subject_name`,
-subjects_students.score, 
+subjects_students.score AS `subject_score`, 
 subjects_students.creation_date, 
 subjects_students.update_date, 
 subjects_students.created_by, 
@@ -192,7 +182,7 @@ INNER JOIN courses_subjects
 ON courses_subjects.id_subject=subjects_students.id_subject
 WHERE subjects_students.id_student=1000 AND courses_subjects.id_course=1003;
 
--- INNER JOIN SUBJECTS STUDENTS 1 COURSE ALL STUDENTS
+-- INNER JOIN ALL STUDENTS AND ALL SUBJECTS INTO A COURSE
 SELECT 
 subjects_students.id,
 subjects.id AS `id_subject`,
@@ -219,6 +209,47 @@ ON subjects.id=subjects_students.id_subject
 INNER JOIN courses_subjects
 ON courses_subjects.id_subject=subjects_students.id_subject
 WHERE courses_subjects.id_course=1003;
+
+-- 1 STUDENT ALL COURSES NOT SUBSCRIBE
+SELECT courses.*
+FROM courses
+WHERE courses.id
+NOT IN (
+  SELECT courses_students.id_course 
+  FROM courses_students 
+  WHERE courses_students.id_student = '1003'
+);
+
+-- 1 COURSE ALL STUDENTS NOT SUBSCRIBE
+SELECT students.*
+FROM students
+WHERE students.id
+NOT IN (
+  SELECT courses_students.id_student 
+  FROM courses_students 
+  WHERE courses_students.id_course = '1003'
+);
+
+-- 1 COURSE ALL SUBJECTS NOT IN COURSE
+SELECT subjects.*
+FROM subjects
+WHERE subjects.id
+NOT IN (
+  SELECT courses_subjects.id_subject 
+  FROM courses_subjects 
+  WHERE courses_subjects.id_course = '1000'
+);
+
+-- 1 SUBJECT ALL COURSE NOT ASSIGNED IN SUBJECT
+SELECT courses.*
+FROM courses
+WHERE courses.id
+NOT IN (
+  SELECT courses_subjects.id_course 
+  FROM courses_subjects 
+  WHERE courses_subjects.id_subject = '1025'
+);
+
 
 -- INNER JOIN GENERIC
 SELECT nombreColumna(s)

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 * Service.
 */
 @Service
-public class ServiceJoinSubjectStudent implements IService {
+public class ServiceJoinStudentSubjectCourse implements IService {
 
   @Autowired
   private Helper<StudentSubjectJoin> helper;
@@ -29,7 +29,7 @@ public class ServiceJoinSubjectStudent implements IService {
   */
   @Override
   public Response getResponse() {
-    Iterable<StudentSubjectJoin> iterable = repository.findSubjectStudentJoin(helper.getId());
+    Iterable<StudentSubjectJoin> iterable = repository.findStudentSubjectCourseJoin(helper.getId(), helper.getIdAux());
     iterable.forEach(helper.getList()::add);
     return responseBuilder.getResponseOkForGet();
   }

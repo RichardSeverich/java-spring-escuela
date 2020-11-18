@@ -8,6 +8,9 @@ public final class Paths {
   private static final String VERSION = "/api/v1";
   private static final String USER = "/users";
   private static final String STUDENT = "/students";
+  private static final String NO_COURSES = "/no-courses";
+  private static final String NO_STUDENTS = "/no-students";
+  private static final String NO_SUBJECTS = "/no-subjects";
   private static final String COURSE = "/courses";
   private static final String SUBJECT = "/subjects";
   private static final String COURSES_STUDENTS = "/courses-students";
@@ -15,6 +18,7 @@ public final class Paths {
   private static final String SUBJECTS_STUDENTS = "/subjects-students";
   private static final String LOGIN = "/login";
   private static final String ID = "/{id}";
+  private static final String ID_AUX = "/{aux}";
   // Login
   public static final String PATH_LOGIN = VERSION + LOGIN;
   // Users
@@ -50,6 +54,18 @@ public final class Paths {
   public static final String PATH_SUBJECTS_STUDENTS_JOIN = PATH_SUBJECTS_WITH_ID + STUDENT;
   //Subjects Courses Join
   public static final String PATH_SUBJECTS_COURSES_JOIN = PATH_SUBJECTS_WITH_ID + COURSE;
+  //Students Subjects Course Join
+  public static final String PATH_STUDENTS_SUBJECTS_COURSES_JOIN = PATH_STUDENTS_WITH_ID + COURSE + ID_AUX;
+  //Courses Subjects Students Join 
+  public static final String PATH_COURSES_SUBJECTS_STUDENTS_JOIN = PATH_COURSES_WITH_ID + STUDENT + ID_AUX;
+  //Courses No Courses By Student 
+  public static final String PATH_NO_COURSES_BY_STUDENT = PATH_STUDENTS_WITH_ID + NO_COURSES;
+  //Courses No Student By Course
+  public static final String PATH_NO_STUDENT_BY_COURSE = PATH_COURSES_WITH_ID + NO_STUDENTS;
+  //No Subjects By Course
+  public static final String PATH_NO_SUBJECT_BY_COURSE = PATH_COURSES_WITH_ID + NO_SUBJECTS;
+  //No Courses By Subject
+  public static final String PATH_NO_COURSES_BY_SUBJECT = PATH_SUBJECTS_WITH_ID + NO_COURSES;
 
   /**
   * Private constructor for utility class.

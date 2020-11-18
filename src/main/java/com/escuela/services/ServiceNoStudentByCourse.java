@@ -1,8 +1,8 @@
 package com.escuela.services;
 
 import com.escuela.helpers.Helper;
-import com.escuela.models.StudentSubjectJoin;
-import com.escuela.repository.RepositoryStudentsSubjectsJoin;
+import com.escuela.models.Student;
+import com.escuela.repository.RepositoryStudents;
 import com.escuela.responses.Response;
 import com.escuela.responses.ResponseBuilder;
 import com.escuela.services.IService;
@@ -13,23 +13,23 @@ import org.springframework.stereotype.Service;
 * Service.
 */
 @Service
-public class ServiceJoinSubjectStudent implements IService {
+public class ServiceNoStudentByCourse implements IService {
 
   @Autowired
-  private Helper<StudentSubjectJoin> helper;
+  private Helper<Student> helper;
 
   @Autowired
-  private ResponseBuilder<StudentSubjectJoin> responseBuilder;
+  private ResponseBuilder<Student> responseBuilder;
 
   @Autowired
-  private RepositoryStudentsSubjectsJoin repository;
+  private RepositoryStudents repository;
 
   /**
   * {@inheritDoc}
   */
   @Override
   public Response getResponse() {
-    Iterable<StudentSubjectJoin> iterable = repository.findSubjectStudentJoin(helper.getId());
+    Iterable<Student> iterable = repository.findNoStudentsByCourse(helper.getId());
     iterable.forEach(helper.getList()::add);
     return responseBuilder.getResponseOkForGet();
   }
