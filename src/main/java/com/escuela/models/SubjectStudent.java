@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import lombok.Getter;
@@ -37,7 +36,7 @@ public class SubjectStudent {
   @Column(name = "id_student")
   @Getter @Setter
   private Integer idStudent;
-  
+
   @NotNull
   @Size(min = Magic.TRHEE, max = Magic.TEN)
   @Column(name = "score")

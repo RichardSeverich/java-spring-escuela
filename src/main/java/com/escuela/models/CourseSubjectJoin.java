@@ -1,15 +1,10 @@
 package com.escuela.models;
 
-import com.escuela.support.Magic;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,8 +13,8 @@ import lombok.Setter;
 * Class.
 */
 @Entity
-@Table(name = "courses")
-public class Course {
+//@Table(name = "courses_subjects")
+public class CourseSubjectJoin {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,11 +22,21 @@ public class Course {
   @Getter @Setter
   private Integer id;
 
-  @NotNull
-  @Size(min = Magic.TRHEE, max = Magic.ONE_HUNDRED_TWENTY)
-  @Column(name = "name")
+  @Column(name = "id_course")
   @Getter @Setter
-  private String name;
+  private Integer idCourse;
+
+  @Column(name = "id_subject")
+  @Getter @Setter
+  private Integer idSubject;
+
+  @Column(name = "course_name")
+  @Getter @Setter
+  private String courseName;
+
+  @Column(name = "subject_name")
+  @Getter @Setter
+  private String subjectName;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
@@ -52,6 +57,6 @@ public class Course {
   /**
   * Constructor.
   */
-  public Course() {
+  public CourseSubjectJoin() {
   }
 }

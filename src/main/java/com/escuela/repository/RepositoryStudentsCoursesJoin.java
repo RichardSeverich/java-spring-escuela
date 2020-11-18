@@ -1,6 +1,6 @@
 package com.escuela.repository;
 
-import com.escuela.models.CourseStudentJoin;
+import com.escuela.models.StudentCourseJoin;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Interface.
  */
 @Repository
-public interface RepositoryCoursesStudentsJoin extends RepositoryGeneric<CourseStudentJoin> {
+public interface RepositoryStudentsCoursesJoin extends RepositoryGeneric<StudentCourseJoin> {
 
   @Query(value = "SELECT "
       + "courses_students.id,"
@@ -33,6 +33,6 @@ public interface RepositoryCoursesStudentsJoin extends RepositoryGeneric<CourseS
       + "ON students.id=courses_students.id_student "
       + "INNER JOIN courses "
       + "ON courses.id=courses_students.id_course "
-      + "WHERE courses_students.id_course = ?1", nativeQuery = true)
-  Iterable<CourseStudentJoin> findCourseStudentJoin(Integer courseId);
+      + "WHERE courses_students.id_student = ?1", nativeQuery = true)
+  Iterable<StudentCourseJoin> findStudentCourseJoin(Integer studentId);
 }

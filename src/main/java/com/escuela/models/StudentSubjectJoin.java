@@ -13,8 +13,7 @@ import lombok.Setter;
 * Class.
 */
 @Entity
-//@Table(name = "courses_students_join")
-public class CourseStudentJoin {
+public class StudentSubjectJoin {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,17 +21,13 @@ public class CourseStudentJoin {
   @Getter @Setter
   private Integer id;
 
-  @Column(name = "id_course")
+  @Column(name = "id_subject")
   @Getter @Setter
-  private Integer idCourse;
+  private Integer idSubject;
 
   @Column(name = "id_student")
   @Getter @Setter
   private Integer idStudent;
-
-  @Column(name = "course_name")
-  @Getter @Setter
-  private String courseName;
 
   @Column(name = "student_dni")
   @Getter @Setter
@@ -66,6 +61,14 @@ public class CourseStudentJoin {
   @Getter @Setter
   private String studentPromo;
 
+  @Column(name = "subject_name")
+  @Getter @Setter
+  private String subjectName;
+
+  @Column(name = "subject_score")
+  @Getter @Setter
+  private String subjectScore;
+
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
   private String creationDate;
@@ -85,6 +88,6 @@ public class CourseStudentJoin {
   /**
   * Constructor.
   */
-  public CourseStudentJoin() {
+  public StudentSubjectJoin() {
   }
 }

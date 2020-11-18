@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,8 +13,7 @@ import lombok.Setter;
 * Class.
 */
 @Entity
-@Table(name = "courses_students")
-public class CourseStudent {
+public class StudentCourseJoin {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,15 +21,49 @@ public class CourseStudent {
   @Getter @Setter
   private Integer id;
 
-  @NotNull
   @Column(name = "id_course")
   @Getter @Setter
-  private Integer courseId;
+  private Integer idCourse;
 
-  @NotNull
   @Column(name = "id_student")
   @Getter @Setter
-  private Integer studentId;
+  private Integer idStudent;
+
+  @Column(name = "course_name")
+  @Getter @Setter
+  private String courseName;
+
+  @Column(name = "student_dni")
+  @Getter @Setter
+  private String studentDni;
+
+  @Column(name = "student_name")
+  @Getter @Setter
+  private String studentName;
+
+  @Column(name = "student_father_last_name")
+  @Getter @Setter
+  private String studentFatherLastName;
+
+  @Column(name = "student_mother_last_name")
+  @Getter @Setter
+  private String studentMotherLastName;
+
+  @Column(name = "student_yunta")
+  @Getter @Setter
+  private String studentYunta;
+
+  @Column(name = "student_grade")
+  @Getter @Setter
+  private String studentGrade;
+
+  @Column(name = "student_weapon")
+  @Getter @Setter
+  private String studentWeapon;
+
+  @Column(name = "student_promo")
+  @Getter @Setter
+  private String studentPromo;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
@@ -53,6 +84,6 @@ public class CourseStudent {
   /**
   * Constructor.
   */
-  public CourseStudent() {
+  public StudentCourseJoin() {
   }
 }

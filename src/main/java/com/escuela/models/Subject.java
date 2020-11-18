@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import lombok.Getter;
@@ -33,7 +32,7 @@ public class Subject {
   @Column(name = "name")
   @Getter @Setter
   private String name;
-  
+
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
   private String creationDate;

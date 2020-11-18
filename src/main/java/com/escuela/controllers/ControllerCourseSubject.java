@@ -70,7 +70,6 @@ public class ControllerCourseSubject {
   }
 
   /**
-  * @param CourseSubject courseSubject.
   * @return Response entity.
   */
   @RequestMapping(method = RequestMethod.POST, value = Paths.PATH_COURSES_SUBJECTS)
@@ -82,7 +81,6 @@ public class ControllerCourseSubject {
   }
 
   /**
-  * @param CourseSubject courseSubject.
   * @param id   id.
   * @return Response entity.
   */
