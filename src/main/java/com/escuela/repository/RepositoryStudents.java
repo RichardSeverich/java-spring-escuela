@@ -12,12 +12,11 @@ import org.springframework.stereotype.Repository;
 public interface RepositoryStudents extends RepositoryGeneric<Student> {
 
   @Query(value = "SELECT students.* "
-  +"FROM students "
-  +"WHERE students.id "
-  +"NOT IN ("
-  +"SELECT courses_students.id_student "
-  +"FROM courses_students "
-  +"WHERE courses_students.id_course = ?1)", nativeQuery = true)
+      + "FROM students "
+      + "WHERE students.id "
+      + "NOT IN ("
+      + "SELECT courses_students.id_student "
+      + "FROM courses_students "
+      + "WHERE courses_students.id_course = ?1)", nativeQuery = true)
   Iterable<Student> findNoStudentsByCourse(Integer courseId);
-
 }

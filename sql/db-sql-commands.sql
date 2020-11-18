@@ -41,6 +41,24 @@ INNER JOIN courses
 ON courses.id=courses_students.id_course
 WHERE courses_students.id_course = 1003;
 
+-- INNER JOIN 1 COURSES ALL SUBJECTS
+SELECT
+courses_subjects.id,
+courses.id AS `id_course`,
+subjects.id AS `id_subject`,
+courses.name AS `course_name`,
+subjects.name AS `subject_name`,
+courses_subjects.creation_date, 
+courses_subjects.update_date, 
+courses_subjects.created_by, 
+courses_subjects.updated_by
+FROM subjects
+INNER JOIN courses_subjects
+ON subjects.id=courses_subjects.id_subject
+INNER JOIN courses
+ON courses.id=courses_subjects.id_course
+WHERE courses_subjects.id_course = 1003;
+
 -- INNER JOIN 1 STUDENTS ALL COURSES
 SELECT
 courses_students.id,
@@ -65,24 +83,6 @@ ON students.id=courses_students.id_student
 INNER JOIN courses
 ON courses.id=courses_students.id_course
 WHERE courses_students.id_student = 1001;
-
--- INNER JOIN 1 COURSES ALL SUBJECTS
-SELECT
-courses_subjects.id,
-courses.id AS `id_course`,
-subjects.id AS `id_subject`,
-courses.name AS `course_name`,
-subjects.name AS `subject_name`,
-courses_subjects.creation_date, 
-courses_subjects.update_date, 
-courses_subjects.created_by, 
-courses_subjects.updated_by
-FROM subjects
-INNER JOIN courses_subjects
-ON subjects.id=courses_subjects.id_subject
-INNER JOIN courses
-ON courses.id=courses_subjects.id_course
-WHERE courses_subjects.id_course = 1003;
 
 -- INNER JOIN 1 STUDENTS ALL SUBJECTS 
 SELECT 

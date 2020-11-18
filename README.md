@@ -545,6 +545,234 @@ GET localhost:8080/api/v1/subjects/{id}/students
 }
 ```
 
+####  Course By Id And Student By Id:
+
+```
+GET localhost:8080/api/v1/courses/{id}/students/{id}
+
+{
+  "id": 1032,
+  "idSubject": 1000,
+  "idStudent": 1003,
+  "studentDni": "123456",
+  "studentName": "Marge",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "48-A",
+  "studentGrade": "ALF",
+  "studentWeapon": "CGON",
+  "studentPromo": "2018",
+  "subjectName": "ENTRENAMIENTO FISICO",
+  "subjectScore": "65",
+  "creationDate": "2020-11-16 18:14:42",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1033,
+  "idSubject": 1001,
+  "idStudent": 1003,
+  "studentDni": "123456",
+  "studentName": "Marge",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "48-A",
+  "studentGrade": "ALF",
+  "studentWeapon": "CGON",
+  "studentPromo": "2018",
+  "subjectName": "DEFENSA PERSONAL",
+  "subjectScore": "79",
+  "creationDate": "2020-11-16 18:14:43",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Student By Id And Course By Id:
+
+```
+GET localhost:8080/api/v1/students/{id}/courses/{id}
+
+{
+  "id": 1016,
+  "idSubject": 1000,
+  "idStudent": 1001,
+  "studentDni": "123478",
+  "studentName": "Lisa",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "97-A",
+  "studentGrade": "SBTTE",
+  "studentWeapon": "CAB",
+  "studentPromo": "2020",
+  "subjectName": "ENTRENAMIENTO FISICO",
+  "subjectScore": "60",
+  "creationDate": "2020-11-16 18:14:42",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1017,
+  "idSubject": 1001,
+  "idStudent": 1001,
+  "studentDni": "123478",
+  "studentName": "Lisa",
+  "studentFatherLastName": "Simpson",
+  "studentMotherLastName": "Simpson",
+  "studentYunta": "97-A",
+  "studentGrade": "SBTTE",
+  "studentWeapon": "CAB",
+  "studentPromo": "2020",
+  "subjectName": "DEFENSA PERSONAL",
+  "subjectScore": "60",
+  "creationDate": "2020-11-16 18:14:42",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Course By Id No Students:
+
+```
+GET localhost:8080/api/v1/courses/{id}/no-students
+
+{
+  "id": 1010,
+  "dni": "64915",
+  "name": "Ragnar",
+  "fatherLastName": "Lothbruk",
+  "motherLastName": "Lothbruk",
+  "birthDate": "1970-12-03",
+  "telephone": "63834717",
+  "address": "Av. B. Galindo km4",
+  "email": "ragnar10@gmail.com",
+  "yunta": "95-B",
+  "grade": "ALF",
+  "weapon": "CGON",
+  "promo": "2020",
+  "creationDate": "2020-11-16 18:14:32",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1011,
+  "dni": "7845961",
+  "name": "Lagertha",
+  "fatherLastName": "Lothbruk",
+  "motherLastName": "Lothbruk",
+  "birthDate": "1970-10-06",
+  "telephone": "77849563",
+  "address": "Av. B. Galindo km9",
+  "email": "lager165@gmail.com",
+  "yunta": "46-B",
+  "grade": "SBTTE",
+  "weapon": "CAB",
+  "promo": "2020",
+  "creationDate": "2020-11-16 18:14:32",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Course By Id No Subjects:
+
+```
+GET localhost:8080/api/v1/courses/{id}/no-subjects
+
+{
+  "id": 1008,
+  "name": "CRUCE DE OBSTACULOS",
+  "creationDate": "2020-11-16 18:14:35",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1009,
+  "name": "COMUNICACIONES Y CRIPTOGRAFIA",
+  "creationDate": "2020-11-16 18:14:35",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1010,
+  "name": "DOCTRINA DEL SATINADOR Y PLANEAMIENTO",
+  "creationDate": "2020-11-16 18:14:35",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Student By Id No Courses:
+
+```
+GET localhost:8080/api/v1/students/{id}/no-courses
+
+{
+  "id": 1000,
+  "name": "Satinador 2015",
+  "creationDate": "2020-11-16 18:14:34",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1001,
+  "name": "Satinador 2016",
+  "creationDate": "2020-11-16 18:14:34",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1002,
+  "name": "Satinador 2017",
+  "creationDate": "2020-11-16 18:14:34",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
+####  Subject By Id No Courses:
+
+```
+GET localhost:8080/api/v1/subjects/{id}/no-courses
+
+{
+  "id": 1006,
+  "name": "Condor 2015",
+  "creationDate": "2020-11-16 18:14:34",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1007,
+  "name": "Condor 2016",
+  "creationDate": "2020-11-16 18:14:34",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+},
+{
+  "id": 1008,
+  "name": "Condor 2017",
+  "creationDate": "2020-11-16 18:14:34",
+  "updateDate": null,
+  "createdBy": "micky",
+  "updatedBy": null
+}
+```
+
 ## Contributing
 
 1. Fork it!
