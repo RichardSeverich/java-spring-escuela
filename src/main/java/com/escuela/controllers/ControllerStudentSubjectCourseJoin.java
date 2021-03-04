@@ -40,7 +40,7 @@ public class ControllerStudentSubjectCourseJoin {
   * @return Response entity..
   */
   @RequestMapping(method = RequestMethod.GET, value = Paths.PATH_COURSES_SUBJECTS_STUDENTS_JOIN)
-  public ResponseEntity<ResponseBody> getByIdCoursesStudents(final @PathVariable Integer id, final @PathVariable Integer aux) {
+  public ResponseEntity<ResponseBody> getByIdCoursesSubjectsStudents(final @PathVariable Integer id, final @PathVariable Integer aux) {
     helper.setId(id); //Id Course
     helper.setIdAux(aux); //Id Student
     Response response = serviceJoinStudentSubjectCourse.getResponse();
