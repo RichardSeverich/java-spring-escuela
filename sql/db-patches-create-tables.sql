@@ -11,6 +11,7 @@ CREATE TABLE users(
    address TEXT NOT NULL,
    email TEXT NOT NULL,
    type VARCHAR(12) NOT NULL,
+   grade TEXT NOT NULL,
    creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
    update_date DATETIME ON UPDATE CURRENT_TIMESTAMP,
    created_by VARCHAR(10),

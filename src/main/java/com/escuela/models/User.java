@@ -97,6 +97,12 @@ public class User {
   @Getter @Setter
   private String type;
 
+  @NotNull
+  @Size(min = Magic.TRHEE, max = Magic.THIRTY)
+  @Column(name = "grade")
+  @Getter @Setter
+  private String grade;
+
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
   private String creationDate;
