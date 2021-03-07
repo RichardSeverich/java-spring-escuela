@@ -29,7 +29,8 @@ public class ServiceJoinStudentSubjectCourse implements IService {
   */
   @Override
   public Response getResponse() {
-    Iterable<StudentSubjectJoin> iterable = repository.findStudentSubjectCourseJoin(helper.getId(), helper.getIdAux());
+    Iterable<StudentSubjectJoin> iterable = repository
+        .findStudentSubjectCourseJoin(helper.getId(), helper.getIdAux());
     iterable.forEach(helper.getList()::add);
     return responseBuilder.getResponseOkForGet();
   }

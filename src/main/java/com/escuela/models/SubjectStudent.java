@@ -38,7 +38,7 @@ public class SubjectStudent {
   private Integer idStudent;
 
   @NotNull
-  @Size(min = Magic.TRHEE, max = Magic.TEN)
+  @Size(min = Magic.ONE, max = Magic.TRHEE)
   @Column(name = "score")
   @Getter @Setter
   private String score;

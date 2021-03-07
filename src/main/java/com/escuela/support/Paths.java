@@ -55,9 +55,11 @@ public final class Paths {
   //Subjects Courses Join
   public static final String PATH_SUBJECTS_COURSES_JOIN = PATH_SUBJECTS_WITH_ID + COURSE;
   //Students Subjects Course Join
-  public static final String PATH_STUDENTS_SUBJECTS_COURSES_JOIN = PATH_STUDENTS_WITH_ID + COURSE + ID_AUX;
+  public static final String PATH_STUDENTS_SUBJECTS_COURSES_JOIN =
+      PATH_STUDENTS_WITH_ID + COURSE + ID_AUX;
   //Courses Subjects Students Join
-  public static final String PATH_COURSES_SUBJECTS_STUDENTS_JOIN = PATH_COURSES_WITH_ID + STUDENT + ID_AUX;
+  public static final String PATH_COURSES_SUBJECTS_STUDENTS_JOIN =
+      PATH_COURSES_WITH_ID + STUDENT + ID_AUX;
   //Courses No Courses By Student
   public static final String PATH_NO_COURSES_BY_STUDENT = PATH_STUDENTS_WITH_ID + NO_COURSES;
   //Courses No Student By Course
