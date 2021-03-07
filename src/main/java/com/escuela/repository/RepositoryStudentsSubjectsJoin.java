@@ -90,7 +90,8 @@ public interface RepositoryStudentsSubjectsJoin extends RepositoryGeneric<Studen
         + "ON subjects.id=subjects_students.id_subject "
         + "INNER JOIN courses_subjects "
         + "ON courses_subjects.id_subject=subjects_students.id_subject "
-        + "WHERE subjects_students.id_student = ?1 AND courses_subjects.id_course = ?2", nativeQuery = true)
+        + "WHERE subjects_students.id_student = ?1 "
+        + "AND courses_subjects.id_course = ?2", nativeQuery = true)
   Iterable<StudentSubjectJoin> findStudentSubjectCourseJoin(Integer studentId, Integer courseId);
 
 }
