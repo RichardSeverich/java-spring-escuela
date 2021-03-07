@@ -41,8 +41,8 @@ public class ControllerStudentSubjectCourseJoin {
   */
   @RequestMapping(method = RequestMethod.GET, value = Paths.PATH_COURSES_SUBJECTS_STUDENTS_JOIN)
   public ResponseEntity<ResponseBody> getByIdCoursesSubjectsStudents(final @PathVariable Integer id, final @PathVariable Integer aux) {
-    helper.setId(id); //Id Course
-    helper.setIdAux(aux); //Id Student
+    helper.setId(aux); //Id Student
+    helper.setIdAux(id); //Id Course
     Response response = serviceJoinStudentSubjectCourse.getResponse();
     return ResponseEntity.status(response.getHttpStatus()).body(response.getBody());
   }
