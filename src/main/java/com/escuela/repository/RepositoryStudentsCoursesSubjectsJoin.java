@@ -13,7 +13,7 @@ public interface RepositoryStudentsCoursesSubjectsJoin
     extends RepositoryGeneric<StudentCourseSubjectJoin> {
 
   @Query(value = "SELECT "
-      + "subjects_students.id,"
+      + "(FLOOR( 1 + RAND( ) *60 )) AS id,"
       + "courses_subjects.id_course,"
       + "courses_subjects.id_subject,"
       + "courses.name AS `course_name`,"
