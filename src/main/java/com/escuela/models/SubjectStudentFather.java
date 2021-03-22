@@ -3,11 +3,10 @@ package com.escuela.models;
 import com.escuela.support.Magic;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -17,11 +16,10 @@ import lombok.Setter;
 /**
 * Class.
 */
-@Entity
-@Table(name = "subjects")
+@MappedSuperclass
 @Getter
 @Setter
-public class Subject {
+public class SubjectStudentFather {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,9 +27,17 @@ public class Subject {
   private Integer id;
 
   @NotNull
-  @Size(min = Magic.TRHEE, max = Magic.ONE_HUNDRED_TWENTY)
-  @Column(name = "name")
-  private String name;
+  @Column(name = "id_subject")
+  private Integer idSubject;
+
+  @NotNull
+  @Column(name = "id_student")
+  private Integer idStudent;
+
+  @NotNull
+  @Size(min = Magic.ONE, max = Magic.TRHEE)
+  @Column(name = "score")
+  private String score;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   private String creationDate;
@@ -48,6 +54,6 @@ public class Subject {
   /**
   * Constructor.
   */
-  public Subject() {
+  public SubjectStudentFather() {
   }
 }
