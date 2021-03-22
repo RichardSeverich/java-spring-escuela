@@ -12,7 +12,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class CourseSubjectJoin extends CourseSubjectFather {
+public class StudentCourseSubjectJoin extends CourseSubjectFather {
 
   @Column(name = "course_name")
   private String courseName;
@@ -20,9 +20,12 @@ public class CourseSubjectJoin extends CourseSubjectFather {
   @Column(name = "subject_name")
   private String subjectName;
 
+  @Column(name = "subject_score")
+  private String subjectScore;
+
   /**
   * Constructor.
   */
-  public CourseSubjectJoin() {
+  public StudentCourseSubjectJoin() {
   }
 }
