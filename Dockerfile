@@ -4,8 +4,8 @@ RUN mkdir -p /app/
 # Set app directory.
 WORKDIR /app
 
-COPY "./build/libs/java-spring-lawyer.jar" "java-spring-lawyer.jar"
+COPY "./build/libs/java-spring-escuela.jar" "java-spring-escuela.jar"
 COPY "./build/resources/main/application.properties" "application.properties"
 
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","java-spring-lawyer.jar"]
+ENTRYPOINT ["java","-jar","java-spring-escuela.jar"]
