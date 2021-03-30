@@ -2,7 +2,7 @@ CREATE TABLE users(
    id INT AUTO_INCREMENT,
    username VARCHAR(10) NOT NULL UNIQUE,
    password VARCHAR(10) NOT NULL,
-   dni VARCHAR(7) NOT NULL UNIQUE,
+   dni VARCHAR(10) NOT NULL UNIQUE,
    name VARCHAR(30) NOT NULL,
    father_last_name VARCHAR(30) NOT NULL,
    mother_last_name VARCHAR(30) NOT NULL,
