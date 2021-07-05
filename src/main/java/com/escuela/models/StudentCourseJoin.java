@@ -17,6 +17,12 @@ public class StudentCourseJoin extends CourseStudentFather {
   @Column(name = "course_name")
   private String courseName;
 
+  @Column(name = "course_start_date")
+  private String courseStartDate;
+
+  @Column(name = "course_finish_date")
+  private String courseFinishDate;
+
   @Column(name = "student_dni")
   private String studentDni;
 

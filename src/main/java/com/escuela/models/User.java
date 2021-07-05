@@ -91,7 +91,7 @@ public class User {
   private String email;
 
   @NotNull
-  @Size(min = Magic.FIVE, max = Magic.SIX)
+  @Size(min = Magic.FIVE, max = Magic.TEN)
   @Pattern(regexp = "(admin|instructor)")
   @Column(name = "type")
   @Getter @Setter

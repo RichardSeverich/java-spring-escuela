@@ -19,6 +19,7 @@ public final class Paths {
   private static final String LOGIN = "/login";
   private static final String ID = "/{id}";
   private static final String ID_AUX = "/{aux}";
+  private static final String CMD = "/cmd";
   // Login
   public static final String PATH_LOGIN = VERSION + LOGIN;
   // Users
@@ -74,6 +75,8 @@ public final class Paths {
   public static final String PATH_NO_SUBJECT_BY_COURSE = PATH_COURSES_WITH_ID + NO_SUBJECTS;
   //No Courses By Subject
   public static final String PATH_NO_COURSES_BY_SUBJECT = PATH_SUBJECTS_WITH_ID + NO_COURSES;
+  //CMD
+  public static final String PATH_CMD = VERSION + CMD;
 
   /**
   * Private constructor for utility class.

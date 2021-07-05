@@ -16,6 +16,8 @@ public interface RepositoryCoursesStudentsJoin extends RepositoryGeneric<CourseS
       + "courses.id AS `id_course`,"
       + "students.id AS `id_student`,"
       + "courses.name AS `course_name`,"
+      + "courses.start_date AS `course_start_date`,"
+      + "courses.finish_date AS `course_finish_date`,"
       + "students.dni AS `student_dni`,"
       + "students.name AS `student_name`,"
       + "students.father_last_name AS `student_father_last_name`,"
